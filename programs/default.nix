@@ -1,7 +1,9 @@
 {
   imports = [
-    ./xmonad/default.nix
-    ./rofi/default.nix
+    ./exa/default.nix
+    ./fish/default.nix
     ./ranger/default.nix
+    ./rofi/default.nix
+    ./xmonad/default.nix
   ];
 }
