@@ -17,11 +17,16 @@
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "mats";
-  home.homeDirectory = "/home/mats";
-  home.packages = [
-    pkgs.alacritty
-  ];
+  home = {
+    username = "mats";
+    homeDirectory = "/home/mats";
+    packages = [
+      pkgs.alacritty
+    ];
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
