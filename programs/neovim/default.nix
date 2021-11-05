@@ -1,4 +1,5 @@
 # Inspired by https://github.com/gvolpe/nix-config/blob/master/home/programs/neovim/default.nix
+# Maybe a solution for treesitter? https://web.archive.org/web/20211025012346/https://breuer.dev/blog/nixos-home-manager-neovim
 
 { config, lib, pkgs, ... }:
 
