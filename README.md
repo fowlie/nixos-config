@@ -26,7 +26,7 @@ there's also:
 
 ## Todo
 
-- [ ] Install firefox and qutebrowser
+- [x] Install firefox and qutebrowser
 - [ ] Symlink /etc/nixos/configuration.nix and put it in the repo
 - [ ] Configure Polybar with a theme
 - [ ] Add beautiful desktop backgrounds
@@ -35,4 +35,4 @@ there's also:
 - [ ] Setup Rofi with pass
 - [ ] Split the configuration files to match other machines
 - [ ] Add some space between the windows in XMonad
-- [ ] Set vim as default editor, at least for git (or via the EDITOR env variable)
+- [x] Set vim as default editor, at least for git (or via the EDITOR env variable)
