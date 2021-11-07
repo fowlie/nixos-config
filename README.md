@@ -34,5 +34,5 @@ there's also:
 - [ ] Migrate my fish config
 - [ ] Setup Rofi with pass
 - [ ] Split the configuration files to match other machines
-- [ ] Add some space between the windows in XMonad
+- [x] Add some space between the windows in XMonad
 - [x] Set vim as default editor, at least for git (or via the EDITOR env variable)
