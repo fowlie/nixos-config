@@ -1,11 +1,11 @@
 {
   imports = [
-    ./exa/default.nix
-    ./fish/default.nix
-    ./idea-community/default.nix
-    ./neovim/default.nix
-    ./ranger/default.nix
-    ./rofi/default.nix
-    ./xmonad/default.nix
+    ./exa
+    ./fish
+    ./idea-community
+    ./neovim
+    ./ranger
+    ./rofi
+    ./xmonad
   ];
 }

@@ -1,5 +1,6 @@
 {
   imports = [
-    ./picom/default.nix
+    ./picom
+    ./polybar
   ];
 }
