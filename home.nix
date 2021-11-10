@@ -27,6 +27,9 @@
     ];
     sessionVariables = {
       EDITOR = "nvim";
+      # Make Swing apps work in XMonad
+      # Ref https://wiki.haskell.org/Xmonad/Frequently_asked_questions#Problems_with_Java_applications.2C_Applet_java_console
+      _JAVA_AWT_WM_NONREPARENTING=1;
     };
   };
 
