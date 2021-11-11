@@ -11,6 +11,7 @@ import XMonad.Layout.Spacing
 main :: IO ()
 main = xmonad $ def
   { terminal    = myTerminal 
+  , modMask     = mod4Mask -- Rebind Mod to the Super key
   , borderWidth = myBorderWidth
   -- Bool|smartBorder Border|screenBorder Bool|screenBorderEnabled Border|windowBorder
   , layoutHook = spacingRaw False (Border 0 10 10 10) True (Border 10 10 10 10) True $
