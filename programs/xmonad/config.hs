@@ -14,7 +14,7 @@ main = xmonad $ def
   , modMask     = mod4Mask -- Rebind Mod to the Super key
   , borderWidth = myBorderWidth
   -- Bool|smartBorder Border|screenBorder Bool|screenBorderEnabled Border|windowBorder
-  , layoutHook = spacingRaw False (Border 0 10 10 10) True (Border 10 10 10 10) True $
+  , layoutHook = spacingRaw False (Border 10 10 10 10) True (Border 10 10 10 10) True $
                  layoutHook def
   , manageHook = myManageHook
   }
