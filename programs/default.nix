@@ -7,6 +7,7 @@
     ./neovim
     ./ranger
     ./rofi
+    ./xmobar
     ./xmonad
   ];
 }

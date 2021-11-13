@@ -11,7 +11,7 @@ Inspired by https://gvolpe.com/blog/xmonad-polybar-nixos
 | File Manager   | [Ranger](https://ranger.github.io/) |
 | Launcher       | [Rofi](https://github.com/davatorium/rofi) |
 | Shell          | [Fish](https://fishshell.com/) |
-| Status Bar     | [Polybar](https://polybar.github.io/) |
+| Status Bar     | [Xmobar](https://github.com/jaor/xmobar) |
 | Terminal       | [Alacritty](https://github.com/alacritty/alacritty) |
 | Window Manager | [XMonad](https://xmonad.org/) |
 

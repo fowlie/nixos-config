@@ -8,8 +8,14 @@ import XMonad.Hooks.ManageHelpers
 -- for window spacing
 import XMonad.Layout.Spacing
 
+-- xmobar
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.EwmhDesktops
+
 main :: IO ()
-main = xmonad $ def
+main = xmonad . ewmh =<< xmobar myConfig
+
+myConfig = def
   { terminal    = myTerminal 
   , modMask     = mod4Mask -- Rebind Mod to the Super key
   , borderWidth = myBorderWidth
