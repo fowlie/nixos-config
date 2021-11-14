@@ -4,6 +4,7 @@ Config { overrideRedirect = False
        , fgColor  = "grey"
        , alpha    = 150
        , position = TopW C 90
+       , iconRoot = "/home/mats/.config/xmobar/"
        , commands = [ Run Weather "EGPF"
                         [ "--template", "<weather> <tempC>°C"
                         , "-L", "0"
@@ -33,9 +34,9 @@ Config { overrideRedirect = False
                     , Run Memory ["--template", "Mem: <usedratio>%"] 10
                     , Run Swap [] 10
                     , Run Date "%a %Y-%m-%d <fc=#8be9fd>%H:%M</fc>" "date" 10
-                    , Run XMonadLog
+                    , Run UnsafeStdinReader
                     ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "%XMonadLog% }{ %ens33% | %cpu% | %memory% * %swap% | %alsa:default:Master% | %EGPF% | %date% "
+       , template = "<icon=itverket-logo.xpm/> %UnsafeStdinReader% }{ %ens33% | %cpu% | %memory% * %swap% | %alsa:default:Master% | %EGPF% | %date% "
        }

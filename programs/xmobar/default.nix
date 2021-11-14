@@ -5,6 +5,6 @@
     pkgs.xmobar
   ];
 
-  # config goes to ~/.config/xmobar/xmonad.hs
   xdg.configFile."xmobar/xmobarrc".source = ./xmobarrc;
+  xdg.configFile."xmobar/itverket-logo.xpm".source = ./itverket-logo.xpm;
 }
