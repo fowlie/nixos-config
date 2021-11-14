@@ -31,7 +31,7 @@ myConfig = def
   ]
 
 myTerminal = "alacritty" 
-myBorderWidth = 3
+myBorderWidth = 2
 appLauncher = "rofi -modi drun,ssh,window,emoji -show drun -show-icons -theme gruvbox-dark"
 
 myManageHook :: ManageHook
