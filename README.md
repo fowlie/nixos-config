@@ -37,5 +37,6 @@ there's also:
 - [ ] Split the configuration files to match other machines
 - [ ] Have Rofi show up on Super key press alone
 - [ ] Add Super+Arrow keybindings to select/move windows
+- [ ] Migrate to system config to Flake
 - [x] Add some space between the windows in XMonad
 - [x] Set vim as default editor, at least for git (or via the EDITOR env variable)
