@@ -26,13 +26,16 @@ there's also:
 
 ## Todo
 
-- [x] Install firefox and qutebrowser
 - [ ] Symlink /etc/nixos/configuration.nix and put it in the repo
-- [ ] Configure Polybar with a theme
+- [ ] Show workspaces in xmobar
+- [ ] Pimp xmobar with icons
+- [ ] Show focused window title in xmobar
 - [ ] Add beautiful desktop backgrounds
-- [ ] Migrate my vim/neovim config
-- [ ] Migrate my fish config
+- [ ] Migrate my neovim config
+- [ ] Configure neovim-lsp for java
 - [ ] Setup Rofi with pass
 - [ ] Split the configuration files to match other machines
+- [ ] Have Rofi show up on Super key press alone
+- [ ] Add Super+Arrow keybindings to select/move windows
 - [x] Add some space between the windows in XMonad
 - [x] Set vim as default editor, at least for git (or via the EDITOR env variable)
