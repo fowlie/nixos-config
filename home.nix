@@ -24,6 +24,7 @@
       pkgs.alacritty
       pkgs.qutebrowser
       pkgs.firefox
+      pkgs.killall
     ];
     sessionVariables = {
       EDITOR = "nvim";
