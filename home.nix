@@ -24,6 +24,7 @@
       pkgs.alacritty
       pkgs.qutebrowser
       pkgs.firefox
+      pkgs.gimp
       pkgs.killall
     ];
     sessionVariables = {
