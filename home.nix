@@ -22,10 +22,11 @@
     homeDirectory = "/home/mats";
     packages = [
       pkgs.alacritty
-      pkgs.qutebrowser
       pkgs.firefox
       pkgs.gimp
       pkgs.killall
+      pkgs.neofetch
+      pkgs.qutebrowser
     ];
     sessionVariables = {
       EDITOR = "nvim";
