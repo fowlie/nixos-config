@@ -28,12 +28,11 @@ there's also:
 
 - [ ] Symlink /etc/nixos/configuration.nix and put it in the repo
 - [ ] Pimp xmobar with icons
-- [ ] Show focused window title in xmobar
-- [ ] Add beautiful desktop backgrounds
 - [ ] Migrate my neovim config
 - [ ] Configure neovim-lsp for java
 - [ ] Setup Rofi with pass
 - [ ] Split the configuration files to match other machines
 - [ ] Have Rofi show up on Super key press alone
+- [ ] Replace Rofi with dmenu...?
 - [ ] Add Super+Arrow keybindings to select/move windows
 - [ ] Migrate to system config to Flake
