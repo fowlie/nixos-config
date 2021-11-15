@@ -23,7 +23,7 @@ Config { overrideRedirect = False
                         [ "-L", "0"
                         , "-H", "32"
                         , "--normal", "#f8f8f2"
-                        , "--high",   "red"
+                        , "--high",   "#ef8230"
                         ] 10
                     , Run Alsa "default" "Master"
                         [ "--template", "<volumestatus>"

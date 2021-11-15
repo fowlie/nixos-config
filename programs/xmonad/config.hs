@@ -19,6 +19,7 @@ myConfig = def
   { terminal    = myTerminal 
   , modMask     = mod4Mask -- Rebind Mod to the Super key
   , borderWidth = myBorderWidth
+  , focusedBorderColor = "#ef8230"
   -- Bool|smartBorder Border|screenBorder Bool|screenBorderEnabled Border|windowBorder
   , layoutHook = spacingRaw False (Border 10 10 10 10) True (Border 10 10 10 10) True $
                  layoutHook def
