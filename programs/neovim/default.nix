@@ -21,5 +21,11 @@ in
     plugins      = myVimPlugins;
     vimAlias     = true;
     vimdiffAlias = true;
+    extraConfig = ''
+      set mouse=a
+      set relativenumber
+      set expandtab
+      set autoindent
+    '';
   };
 }

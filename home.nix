@@ -27,6 +27,7 @@
       pkgs.killall
       pkgs.neofetch
       pkgs.qutebrowser
+      pkgs.xclip
     ];
     sessionVariables = {
       EDITOR = "nvim";

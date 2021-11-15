@@ -15,6 +15,7 @@
     shellAliases = {
       gs   = "git status";
       gd   = "git diff";
+      copy = "xclip -o -selection clipboard";
     };
   };
 }
