@@ -24,7 +24,9 @@
       pkgs.alacritty
       pkgs.firefox
       pkgs.gimp
+      pkgs.jq
       pkgs.killall
+      pkgs.maven3
       pkgs.neofetch
       pkgs.qutebrowser
       pkgs.xclip
