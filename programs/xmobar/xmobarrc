@@ -2,10 +2,10 @@ Config { overrideRedirect = False
        , font     = "xft:Dejavu Sans Mono:size=11,iosevka-9"
        , bgColor  = "black"
        , fgColor  = "grey"
-       , alpha    = 150
+       , alpha    = 255
        , position = TopW C 90
        , iconRoot = "/home/mats/.config/xmobar/"
-       , commands = [ Run Weather "EGPF"
+       , commands = [ Run Weather "ENGM"
                         [ "--template", "<weather> <tempC>°C"
                         , "-L", "0"
                         , "-H", "25"
