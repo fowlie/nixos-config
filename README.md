@@ -3,6 +3,9 @@
 My current - and always evolving - NixOS configuration files, home-manager, neovim, etc.
 Inspired by https://gvolpe.com/blog/xmonad-polybar-nixos
 
+## First time setup
+Install NixOS and symlink /etc/nixos/configuration.nix to ./configuration.nix.
+
 ## Programs
 
 | Type           | Program      |
@@ -26,7 +29,8 @@ there's also:
 
 ## Todo
 
-- [ ] Symlink /etc/nixos/configuration.nix and put it in the repo
+- [x] Symlink /etc/nixos/configuration.nix and put it in the repo
+- [ ] Have hardware-configuration.nix refer to disks by labels not uids
 - [ ] Pimp xmobar with icons
 - [ ] Migrate my neovim config
 - [ ] Configure neovim-lsp for java
