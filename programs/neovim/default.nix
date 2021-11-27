@@ -7,6 +7,8 @@ let
   myVimPlugins = with pkgs.vimPlugins; [
     vim-nix
     nerdtree
+    vim-devicons
+    vim-startify
   ];
 in
 {
@@ -23,31 +25,27 @@ in
     vimAlias     = true;
     vimdiffAlias = true;
     extraConfig = ''
-      set noswapfile
-      set mouse=a
-      set number relativenumber
-      set nowrap
-      set expandtab
-      set autoindent
-
-      " Use space as leader key
-      let mapleader=" "
+      set ignorecase                        " case insensitive
+      set noswapfile                        " disable creating swap file
+      set mouse=a                           " enable mouse click
+      set number relativenumber             " show relative line numbers
+      set nowrap                            " disable line wrapping
+      set expandtab                         " converts tab to whitespace
+      set autoindent                        " prefix new lines with same indent
+      vnoremap < <gv                        " Indent left, then go back to select mode
+      vnoremap > >gv                        " Indent right, then go back to select mode
+      let mapleader=" "                     " Use space as leader key
+      set splitright                        " Split window to the right
+      set splitbelow                        " Split window downwards
 
       " NERDTree
       nnoremap <leader>e :NERDTreeToggle<CR>
 
-      " Window splits
-      set splitright
-      set splitbelow
 
       " Tab sizes
       set sw=4
       autocmd Filetype yaml setocal sw=2
       autocmd Filetype sh setocal sw=2
-      
-      " Better indenting
-      vnoremap < <gv
-      vnoremap > >gv
 
       " TAB in normal mode will cycle buffers
       nnoremap <silent> <TAB>   :bnext<CR>
