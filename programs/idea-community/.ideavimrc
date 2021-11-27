@@ -1,0 +1,6 @@
+set surround      " Plugins
+set nu rnu        " Relative line numbers
+map <A-h> <C-w>h
+map <A-j> <C-w>j
+map <A-k> <C-w>k
+map <A-l> <C-w>l
