@@ -43,3 +43,5 @@ there's also:
 - [ ] Replace Rofi with dmenu...?
 - [ ] Add Super+Arrow keybindings to select/move windows
 - [ ] Consider migrating to flake
+- [ ] Migrate ideavimrc
+- [ ] Add a nerdfont to alacritty
