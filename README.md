@@ -3,8 +3,11 @@
 My current - and always evolving - NixOS configuration files, home-manager, neovim, etc.
 Inspired by https://gvolpe.com/blog/xmonad-polybar-nixos
 
+
 ## First time setup
+
 Install NixOS and symlink /etc/nixos/configuration.nix to ./configuration.nix.
+
 
 ## Programs
 
@@ -18,6 +21,7 @@ Install NixOS and symlink /etc/nixos/configuration.nix to ./configuration.nix.
 | Terminal       | [Alacritty](https://github.com/alacritty/alacritty) |
 | Window Manager | [XMonad](https://xmonad.org/) |
 
+
 ## Keybindings
 
 In addition to XMonad's [default keybindings](https://xmonad.org/images/cheat/xmbindings.png),
@@ -27,10 +31,9 @@ there's also:
 * `Mod+[` for Firefox
 * `Mod+]` for Ranger
 
+
 ## Todo
 
-- [x] Symlink /etc/nixos/configuration.nix and put it in the repo
-- [ ] Have hardware-configuration.nix refer to disks by labels not uids
 - [ ] Pimp xmobar with icons
 - [ ] Migrate my neovim config
 - [ ] Configure neovim-lsp for java
@@ -39,4 +42,4 @@ there's also:
 - [ ] Have Rofi show up on Super key press alone
 - [ ] Replace Rofi with dmenu...?
 - [ ] Add Super+Arrow keybindings to select/move windows
-- [ ] Migrate to system config to Flake
+- [ ] Consider migrating to flake
