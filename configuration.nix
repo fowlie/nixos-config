@@ -21,6 +21,10 @@
   # Set your time zone.
   time.timeZone = "Europe/Oslo";
 
+  fonts.fonts = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+  ];
+
   # Set a random wallpaper
   services.xserver.displayManager.sessionCommands = ''
     feh --bg-fill --randomize /home/mats/.config/wallpapers/*.jpg &
