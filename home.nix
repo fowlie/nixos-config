@@ -21,7 +21,6 @@
     username = "mats";
     homeDirectory = "/home/mats";
     packages = [
-      pkgs.alacritty
       pkgs.firefox
       pkgs.gimp
       pkgs.jq
