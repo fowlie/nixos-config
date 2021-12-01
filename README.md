@@ -7,6 +7,18 @@ Inspired by https://gvolpe.com/blog/xmonad-polybar-nixos
 ## First time setup
 
 Install NixOS and symlink /etc/nixos/configuration.nix to ./configuration.nix.
+  - `sudo ln --force -s ~/.config/nixpkgs/configuration.nix /etc/nixos/configuration.nix`
+
+### Install homemanager
+Set up the home manager channel.
+```
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz home-manager
+nix-channel --update
+```
+Log out and log back in.
+
+Run the install command
+`nix-shell '<home-manager>' -A install`
 
 
 ## Programs
