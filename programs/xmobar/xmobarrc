@@ -38,5 +38,5 @@ Config { overrideRedirect = False
                     ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=itverket-logo.xpm/> %UnsafeStdinReader% }{ %wlp0s20f3% | %cpu% | %memory% * %swap% | %alsa:default:Master% | %EGPF% | %date% "
+       , template = " <icon=itverket-logo.xpm/> %UnsafeStdinReader% }{ %wlp0s20f3% | %cpu% | %memory% * %swap% | %alsa:default:Master% | %EGPF% | %date% "
        }
