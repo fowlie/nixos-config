@@ -40,6 +40,7 @@ appLauncher = "rofi -modi drun,ssh,window,emoji -show drun -show-icons -theme gr
 
 myManageHook :: ManageHook
 myManageHook = composeAll
-  [ className =? "jetbrains-idea-ce" <&&> name =? "win0" --> doFloat
+  [ className =? "jetbrains-idea-ce" <&&> name =? "win0" --> doFloat -- IntelliJ splash screen
+  , className =? "jetbrains-studio"  <&&> name =? "win0" --> doFloat -- Android studio splash screen
   , isDialog                                             --> doFloat
   ] where name = stringProperty "WM_NAME"
