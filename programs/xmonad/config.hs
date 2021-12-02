@@ -29,6 +29,9 @@ myConfig = def
   [ ("M-p", spawn appLauncher)
   , ("M-[", spawn "firefox")
   , ("M-]", runInTerm "" "ranger")
+  , ("<XF86AudioLowerVolume>", spawn "amixer -q sset Master 2%-")
+  , ("<XF86AudioRaiseVolume>", spawn "amixer -q sset Master 2%+")
+  , ("<XF86AudioMute>",        spawn "amixer set Master toggle")
   ]
 
 myTerminal = "alacritty" 

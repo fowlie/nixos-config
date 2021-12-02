@@ -32,6 +32,7 @@
       neofetch
       qutebrowser
       slack
+      xorg.xev             # x events
       teams
       xclip
     ];
