@@ -35,6 +35,8 @@
       xorg.xev             # x events
       teams
       xclip
+      android-studio
+      android-tools
     ];
     sessionVariables = {
       EDITOR = "nvim";
