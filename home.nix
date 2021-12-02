@@ -15,20 +15,25 @@
     userEmail = "mats.faugli@gmail.com";
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home = {
     username = "mats";
     homeDirectory = "/home/mats";
-    packages = [
-      pkgs.firefox
-      pkgs.gimp
-      pkgs.jq
-      pkgs.killall
-      pkgs.maven3
-      pkgs.neofetch
-      pkgs.qutebrowser
-      pkgs.xclip
+    packages = with pkgs; [
+      firefox
+      gimp
+      htop
+      jq
+      killall
+      maven3
+      neofetch
+      qutebrowser
+      slack
+      teams
+      xclip
     ];
     sessionVariables = {
       EDITOR = "nvim";
