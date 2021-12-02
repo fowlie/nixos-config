@@ -1,9 +1,13 @@
 {
   services.picom = {
     enable = true;
-    activeOpacity = "0.95";
+    activeOpacity = "1.0";
     inactiveOpacity = "0.9";
-    opacityRule = [ "100:name *= 'rofi'" ];
+    fade = true;
+    backend = "glx";
+    opacityRule = [
+      "100:name *= 'rofi'"
+    ];
     shadow = true;
   };
 }
