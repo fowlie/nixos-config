@@ -3,7 +3,7 @@ Config { overrideRedirect = False
        , bgColor  = "black"
        , fgColor  = "grey"
        , alpha    = 255
-       , position = TopW C 90
+       , position = TopW C 100
        , iconRoot = "/home/mats/.config/xmobar/"
        , commands = [ Run Weather "ENGM"
                         [ "--template", "<weather> <tempC>°C"
@@ -19,7 +19,7 @@ Config { overrideRedirect = False
                         , "--high"  , "red"
                         , "--normal", "green"
                         ] 10
-                    , Run Network "ens33"
+                    , Run Network "wlp0s20f3"
                         [ "-L", "0"
                         , "-H", "32"
                         , "--normal", "#f8f8f2"
