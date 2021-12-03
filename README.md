@@ -46,9 +46,9 @@ there's also:
 
 ## Todo
 
+- [ ] Fix EURKey keyboard layout
 - [ ] Pimp xmobar with icons
-- [ ] Add battery indicator to xmobar
-- [ ] Store wifi passwords safely
+- [ ] Pimp lightdm theme
 - [ ] Configure Howdy
 - [ ] Configure fingerprint reader
 - [ ] Screen locker
@@ -63,3 +63,5 @@ there's also:
 - [ ] Add Super+Arrow keybindings to select/move windows
 - [ ] Migrate ideavimrc
 - [x] Add a nerdfont to alacritty
+- [x] Add battery indicator to xmobar
+- [x] Store wifi passwords safely
