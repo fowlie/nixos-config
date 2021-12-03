@@ -23,6 +23,7 @@
     username = "mats";
     homeDirectory = "/home/mats";
     packages = with pkgs; [
+      spaceFM
       google-chrome
       firefox
       gimp
