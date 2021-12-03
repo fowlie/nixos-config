@@ -3,6 +3,7 @@
 {
   home.packages = [
     pkgs.xmobar
+    pkgs.font-awesome
   ];
 
   xdg.configFile."xmobar/xmobarrc".source = ./xmobarrc;
