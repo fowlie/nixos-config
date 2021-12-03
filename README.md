@@ -47,13 +47,19 @@ there's also:
 ## Todo
 
 - [ ] Pimp xmobar with icons
-- [ ] Migrate my neovim config
+- [ ] Add battery indicator to xmobar
+- [ ] Store wifi passwords safely
+- [ ] Configure Howdy
+- [ ] Configure fingerprint reader
+- [ ] Screen locker
+- [ ] Configure screenshot tool
+- [ ] Extend xmonad with three col layout
+- [ ] Setup android development environment
 - [ ] Configure neovim-lsp for java
 - [ ] Setup Rofi with pass
 - [ ] Split the configuration files to match other machines
 - [ ] Have Rofi show up on Super key press alone
 - [ ] Replace Rofi with dmenu...?
 - [ ] Add Super+Arrow keybindings to select/move windows
-- [ ] Consider migrating to flake
 - [ ] Migrate ideavimrc
 - [x] Add a nerdfont to alacritty
