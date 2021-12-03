@@ -23,9 +23,11 @@
     username = "mats";
     homeDirectory = "/home/mats";
     packages = with pkgs; [
+      google-chrome
       firefox
       gimp
       htop
+      usbutils
       jq
       killall
       maven3
@@ -35,8 +37,11 @@
       xorg.xev             # x events
       teams
       xclip
+
+      # Android development
       android-studio
       android-tools
+      flutter
     ];
     sessionVariables = {
       EDITOR = "nvim";
