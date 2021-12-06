@@ -70,6 +70,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
+  # Enable brightness buttons on laptop
+  services.illum.enable = true;
+
   environment.systemPackages = with pkgs; [
     feh   # Set background images
   ];
