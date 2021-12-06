@@ -11,6 +11,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  virtualisation.docker.enable = true;
+
   networking.hostName = "thinkpad-x1";  # Define your hostname.
   networking.wireless.enable = true;    # Enables wireless support via wpa_supplicant.
   networking.wireless.environmentFile = "/run/secrets/wireless.env";
@@ -48,10 +50,11 @@
     shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [
-      "wheel" # Enable ‘sudo’ for the user.
-      "audio"
-      "networking"
-      "adbusers"
+      "wheel"       # Enable ‘sudo’ for the user.
+      "audio"       # Maybe not neccessary
+      "networking"  # Networking
+      "adbusers"    # Android development
+      "docker"      # Docker
     ];
   };
 
