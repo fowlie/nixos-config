@@ -28,6 +28,8 @@
       firefox
       gimp
       htop
+      libnotify           # Provides notify-send
+      dunst               # Desktop notifications
       usbutils
       jq
       killall
@@ -35,7 +37,7 @@
       neofetch
       qutebrowser
       slack
-      xorg.xev             # x events
+      xorg.xev             # Get keyboard button names with `xev -event keyboard`
       teams
       xclip
 
