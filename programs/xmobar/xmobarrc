@@ -8,7 +8,7 @@ Config { overrideRedirect = False
        , iconRoot = "/home/mats/.config/xmobar/"
        , commands = [
                         -- Echos a "caret-left" icon with the Font Awesome 5 font
-                      Run Date "<fn=1>\xf0d9</fn>" "delim" 0
+                      Run Com "echo" ["<fn=1>\xf0d9</fn>"] "delim" 36000
                     , Run Weather "ENGM"
                         [ "--template", "<weather> <tempC>°C"
                         , "-L", "0"
