@@ -5,9 +5,10 @@
 
 let
   myVimPlugins = with pkgs.vimPlugins; [
-    vim-nix
     nerdtree
+    surround
     vim-devicons
+    vim-nix
     vim-startify
   ];
 in
