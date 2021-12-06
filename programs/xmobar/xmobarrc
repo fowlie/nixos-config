@@ -9,14 +9,6 @@ Config { overrideRedirect = False
        , commands = [
                         -- Echos a "caret-left" icon with the Font Awesome 5 font
                       Run Com "echo" ["<fn=1>\xf0d9</fn>"] "delim" 36000
-                    , Run Weather "ENGM"
-                        [ "--template", "<weather> <tempC>°C"
-                        , "-L", "0"
-                        , "-H", "25"
-                        , "--low"   , "lightblue"
-                        , "--normal", "#f8f8f2"
-                        , "--high"  , "red"
-                        ] 36000
                     , Run Cpu
                         [ "-L", "3"
                         , "-H", "50"
@@ -44,5 +36,5 @@ Config { overrideRedirect = False
                     ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = " <icon=itverket-logo.xpm/> %UnsafeStdinReader% }{ <box type=Bottom width=2 mb=2 color=#51afef>%wlp0s20f3%</box> | %cpu% | %memory% * %swap% | %alsa:default:Master% | %EGPF% |<fc=#fe8019,#000000>%delim%</fc><fc=#ebdbb2,#fe8019> %battery%</fc><fc=#fb4934,#fe8019>%delim%</fc><fc=#ebdbb2,#fb4934> %date% </fc>"
+       , template = " <icon=itverket-logo.xpm/> %UnsafeStdinReader% }{ <box type=Bottom width=2 mb=2 color=#51afef>%wlp0s20f3%</box> | %cpu% | %memory% * %swap% | %alsa:default:Master% <fc=#fe8019,#000000>%delim%</fc><fc=#ebdbb2,#fe8019> %battery%</fc><fc=#fb4934,#fe8019>%delim%</fc><fc=#ebdbb2,#fb4934> %date% </fc>"
        }
