@@ -46,7 +46,7 @@ there's also:
 
 ## Todo
 
-- [ ] Fix EURKey keyboard layout
+- [ ] Split the configuration files to match other machines
 - [ ] Pimp xmobar with icons
 - [ ] Pimp lightdm theme
 - [ ] Configure Howdy
@@ -57,7 +57,6 @@ there's also:
 - [ ] Setup android development environment
 - [ ] Configure neovim-lsp for java
 - [ ] Setup Rofi with pass
-- [ ] Split the configuration files to match other machines
 - [ ] Have Rofi show up on Super key press alone
 - [ ] Replace Rofi with dmenu...?
 - [ ] Add Super+Arrow keybindings to select/move windows
@@ -65,3 +64,4 @@ there's also:
 - [x] Add a nerdfont to alacritty
 - [x] Add battery indicator to xmobar
 - [x] Store wifi passwords safely
+- [x] Fix EURKey keyboard layout

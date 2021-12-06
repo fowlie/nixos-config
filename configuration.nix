@@ -28,9 +28,8 @@
   # Set your time zone.
   time.timeZone = "Europe/Oslo";
 
-  services.xserver.layout = "us,no";
-  services.xserver.xkbVariant = "euro,";
-  services.xserver.xkbOptions = "caps:ctrl_modifier,grp:shifts_toggle";
+  # Use the EURKEY layout, see https://eurkey.steffen.bruentjen.eu
+  services.xserver.layout = "eu";
 
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
