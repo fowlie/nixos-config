@@ -29,8 +29,9 @@ myConfig = def
   [ ("M-p", spawn appLauncher)
   , ("M-[", spawn "firefox")
   , ("M-]", runInTerm "" "ranger")
-  , ("<XF86AudioLowerVolume>", spawn "amixer -q sset Master 2%-")
-  , ("<XF86AudioRaiseVolume>", spawn "amixer -q sset Master 2%+")
+  , ("M-/", spawn "feh --bg-fill --randomize /home/mats/.config/wallpapers/*.jpg")
+  , ("<XF86AudioLowerVolume>", spawn "amixer -q sset Master 5%-")
+  , ("<XF86AudioRaiseVolume>", spawn "amixer -q sset Master 5%+")
   , ("<XF86AudioMute>",        spawn "amixer set Master toggle")
   ]
 
