@@ -5,9 +5,11 @@
 
 let
   myVimPlugins = with pkgs.vimPlugins; [
+    lightline-vim
     nerdtree
     surround
     vim-devicons
+    vim-fugitive
     vim-nix
     vim-startify
   ];
@@ -43,10 +45,11 @@ in
       nnoremap <leader>e :NERDTreeToggle<CR>
 
 
-      " Tab sizes
-      set sw=4
-      autocmd Filetype yaml setocal sw=2
-      autocmd Filetype sh setocal sw=2
+      " Tab sizes and file types            " format   T spaces
+      "                                     "-------------------"
+      set sw=4                              " Default  | 4
+      autocmd Filetype yaml setlocal sw=2   " yaml     | 2
+      autocmd Filetype sh setlocal sw=2     " shell    | 2
 
       " TAB in normal mode will cycle buffers
       nnoremap <silent> <TAB>   :bnext<CR>
@@ -82,6 +85,23 @@ in
       inoremap <A-j> <C-w>j
       inoremap <A-k> <C-w>k
       inoremap <A-l> <C-w>l
+
+
+      " Lightline plugin config
+      " Disable the -- INSERT --
+      set noshowmode
+     " Display current git branch
+      let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
     '';
   };
 }
