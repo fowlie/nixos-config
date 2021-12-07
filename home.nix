@@ -29,7 +29,6 @@
       gimp
       htop
       libnotify           # Provides notify-send
-      dunst               # Desktop notifications
       usbutils
       jq
       killall
