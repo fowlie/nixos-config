@@ -15,15 +15,17 @@ let
   ];
 in
 {
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-    }))
-  ];
+  # Uncomment below to build latest version from master branch
+  #nixpkgs.overlays = [
+  #  (import (builtins.fetchTarball {
+  #    url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+  #  }))
+  #];
 
   programs.neovim = {
     enable       = true;
-    package      = pkgs.neovim-nightly;
+    # Uncomment below to build latest version from master branch
+    # package      = pkgs.neovim-nightly;
     plugins      = myVimPlugins;
     vimAlias     = true;
     vimdiffAlias = true;
