@@ -30,6 +30,7 @@ myConfig = def
   , ("M-[", spawn "firefox")
   , ("M-]", runInTerm "" "ranger")
   , ("M-/", spawn "feh --bg-fill --randomize /home/mats/.config/wallpapers/*.jpg")
+  , ("<Print>", spawn "flameshot gui")
   , ("<XF86AudioLowerVolume>", spawn "amixer -q sset Master 5%-")
   , ("<XF86AudioRaiseVolume>", spawn "amixer -q sset Master 5%+")
   , ("<XF86AudioMute>",        spawn "amixer set Master toggle")

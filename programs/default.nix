@@ -4,6 +4,7 @@
     ./dunst
     ./exa
     ./fish
+    ./flameshot
     ./fzf
     ./idea-community
     ./neovim
