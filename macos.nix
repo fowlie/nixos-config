@@ -6,6 +6,33 @@
   home.username = "mats";
   home.homeDirectory = "/Users/mats";
 
+  imports = [
+    ./programs/alacritty
+    ./programs/exa
+    ./programs/fish
+    ./programs/fzf
+    ./programs/neovim
+    ./programs/ranger
+  ];
+
+  programs.fish.shellInit =
+  ''
+    # nix
+    if test -e /nix/var/nix/profiles/default/etc/profile/d/nix-daemon.sh
+      fenv source /nix/var/nix/profiles/default/etc/profile/d/nix-daemon.sh
+    end
+
+    # add nix and home-manager binaries
+    set -x PATH $HOME/.nix-profile/bin /nix/var/nix/profiles/default/bin $PATH
+  '';
+
+  home.packages = with pkgs; [
+    go
+    neofetch
+    nerdfonts
+    ripgrep
+  ];
+
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards

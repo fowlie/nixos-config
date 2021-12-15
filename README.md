@@ -20,7 +20,6 @@ Log out and log back in.
 Run the install command
 `nix-shell '<home-manager>' -A install`
 
-
 ## Programs
 
 | Type           | Program      |
@@ -46,7 +45,6 @@ there's also:
 
 ## Todo
 
-- [ ] Split the configuration files to match other machines
 - [ ] Pimp xmobar with icons
 - [ ] Pimp lightdm theme
 - [ ] Configure Howdy
@@ -61,6 +59,7 @@ there's also:
 - [ ] Replace Rofi with dmenu...?
 - [ ] Add Super+Arrow keybindings to select/move windows
 - [ ] Migrate ideavimrc
+- [x] Split the configuration files to match other machines
 - [x] Add a nerdfont to alacritty
 - [x] Add battery indicator to xmobar
 - [x] Store wifi passwords safely
