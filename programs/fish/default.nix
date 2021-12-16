@@ -21,10 +21,16 @@
         sha256 = "1x1h65l8582p7h7w5986sc9vfd7b88a7hsi68dbikm090gz8nlxx";
       };
     }];
+    shellAbbrs = {
+      g = "git";
+    };
     shellAliases = {
-      gs   = "git status";
-      gd   = "git diff";
-      copy = "xclip -o -selection clipboard";
+      hms    = "home-manager switch";
+      gs     = "git status";
+      gd     = "git diff";
+      copy   = "xclip -o -selection clipboard";
+      "..."  = "cd ../..";
+      "...." = "cd ../../..";
     };
   };
 }
