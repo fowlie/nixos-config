@@ -8,9 +8,11 @@
 
   imports = [
     ./programs/alacritty
+    ./programs/bat
     ./programs/exa
     ./programs/fish
     ./programs/fzf
+    ./programs/git
     ./programs/neovim
     ./programs/ranger
   ];
@@ -27,7 +29,9 @@
   '';
 
   home.packages = with pkgs; [
+    bottom
     go
+    gopls
     neofetch
     nerdfonts
     ripgrep

@@ -45,6 +45,7 @@ there's also:
 
 ## Todo
 
+- [ ] Switch from symlinking home.nix to make use of machine/<hostname>.nix
 - [ ] Pimp xmobar with icons
 - [ ] Pimp lightdm theme
 - [ ] Configure Howdy

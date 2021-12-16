@@ -7,6 +7,7 @@ let
   myVimPlugins = with pkgs.vimPlugins; [
     lightline-vim
     nerdtree
+    nvim-lspconfig
     surround
     vim-devicons
     vim-fugitive
@@ -30,6 +31,10 @@ in
     vimAlias     = true;
     vimdiffAlias = true;
     extraConfig = ''
+      " Lsp Config
+      lua require'lspconfig'.gopls.setup{}
+
+      " Basics
       set ignorecase                        " case insensitive
       set noswapfile                        " disable creating swap file
       set mouse=a                           " enable mouse click
@@ -45,7 +50,6 @@ in
 
       " NERDTree
       nnoremap <leader>e :NERDTreeToggle<CR>
-
 
       " Tab sizes and file types            " format   T spaces
       "                                     "-------------------"
@@ -93,17 +97,7 @@ in
       " Disable the -- INSERT --
       set noshowmode
      " Display current git branch
-      let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
-
+      let g:lightline = { 'colorscheme': 'wombat', 'active': {   'left': [ [ 'mode', 'paste' ],             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ] }, 'component_function': {   'gitbranch': 'FugitiveHead' }, }
     '';
   };
 }
