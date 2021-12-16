@@ -86,11 +86,6 @@ in
       xnoremap J :move '>+1<CR>gv'
 
       " CTRL + arrow to jump between windows
-      tnoremap <C-h> <C-\><C-N><C-w>h
-      tnoremap <C-j> <C-\><C-N><C-w>j
-      tnoremap <C-k> <C-\><C-N><C-w>k
-      tnoremap <C-l> <C-\><C-N><C-w>l
-
       inoremap <C-h> <C-\><C-N><C-w>h
       inoremap <C-j> <C-\><C-N><C-w>j
       inoremap <C-k> <C-\><C-N><C-w>k
@@ -106,6 +101,14 @@ in
       inoremap <C-k> <C-w>k
       inoremap <C-l> <C-w>l
 
+      " Terminal
+      tnoremap <C-h> <C-\><C-N><C-w>h
+      tnoremap <C-j> <C-\><C-N><C-w>j
+      tnoremap <C-k> <C-\><C-N><C-w>k
+      tnoremap <C-l> <C-\><C-N><C-w>l
+      tnoremap <Esc> <C-\><C-n>
+      nnoremap <leader>t :split term://fish<CR>i
+      autocmd TermOpen * set nonumber norelativenumber
 
       " Theming
       set background=dark
