@@ -5,14 +5,22 @@
 
 let
   myVimPlugins = with pkgs.vimPlugins; [
+    gruvbox         # theme
     lightline-vim
     nerdtree
-    nvim-lspconfig
     surround
     vim-devicons
     vim-fugitive
     vim-nix
     vim-startify
+
+    # LSP & Code completion
+    cmp-buffer      # autocompletion for buffer
+    cmp-nvim-lsp    # autocompletion for nvim lsp
+    cmp-vsnip
+    vim-vsnip
+    nvim-cmp        # autocompletion framework
+    nvim-lspconfig  # lsp client
   ];
 in
 {
@@ -23,6 +31,16 @@ in
   #  }))
   #];
 
+  # Copy lua scripts
+  xdg.configFile."nvim/lspconfig.lua".source = ./lspconfig.lua;
+  xdg.configFile."nvim/cmp.lua".source = ./cmp.lua;
+
+  home.packages = with pkgs; [
+    go
+    gopls
+    rnix-lsp
+  ];
+
   programs.neovim = {
     enable       = true;
     # Uncomment below to build latest version from master branch
@@ -31,8 +49,10 @@ in
     vimAlias     = true;
     vimdiffAlias = true;
     extraConfig = ''
-      " Lsp Config
-      lua require'lspconfig'.gopls.setup{}
+      " Run lua scripts
+      :luafile ~/.config/nvim/lspconfig.lua
+      set completeopt=menu,menuone,noselect " needed for nvim-cmp setup
+      :luafile ~/.config/nvim/cmp.lua
 
       " Basics
       set ignorecase                        " case insensitive
@@ -65,34 +85,31 @@ in
       xnoremap K :move '<-2<CR>gv'
       xnoremap J :move '>+1<CR>gv'
 
-      " Use CTRL + hjkl to scroll buffer
-      nnoremap <C-h> zh
-      nnoremap <C-j> <C-e>
-      nnoremap <C-k> <C-y>
-      nnoremap <C-l> zl
+      " CTRL + arrow to jump between windows
+      tnoremap <C-h> <C-\><C-N><C-w>h
+      tnoremap <C-j> <C-\><C-N><C-w>j
+      tnoremap <C-k> <C-\><C-N><C-w>k
+      tnoremap <C-l> <C-\><C-N><C-w>l
 
-      " ALT + arrow to jump between windows
-      tnoremap <A-h> <C-\><C-N><C-w>h
-      tnoremap <A-j> <C-\><C-N><C-w>j
-      tnoremap <A-k> <C-\><C-N><C-w>k
-      tnoremap <A-l> <C-\><C-N><C-w>l
+      inoremap <C-h> <C-\><C-N><C-w>h
+      inoremap <C-j> <C-\><C-N><C-w>j
+      inoremap <C-k> <C-\><C-N><C-w>k
+      inoremap <C-l> <C-\><C-N><C-w>l
 
-      inoremap <A-h> <C-\><C-N><C-w>h
-      inoremap <A-j> <C-\><C-N><C-w>j
-      inoremap <A-k> <C-\><C-N><C-w>k
-      inoremap <A-l> <C-\><C-N><C-w>l
+      nnoremap <C-h> <C-\><C-N><C-w>h
+      nnoremap <C-j> <C-\><C-N><C-w>j
+      nnoremap <C-k> <C-\><C-N><C-w>k
+      nnoremap <C-l> <C-\><C-N><C-w>l
 
-      nnoremap <A-h> <C-\><C-N><C-w>h
-      nnoremap <A-j> <C-\><C-N><C-w>j
-      nnoremap <A-k> <C-\><C-N><C-w>k
-      nnoremap <A-l> <C-\><C-N><C-w>l
-
-      inoremap <A-h> <C-w>h
-      inoremap <A-j> <C-w>j
-      inoremap <A-k> <C-w>k
-      inoremap <A-l> <C-w>l
+      inoremap <C-h> <C-w>h
+      inoremap <C-j> <C-w>j
+      inoremap <C-k> <C-w>k
+      inoremap <C-l> <C-w>l
 
 
+      " Theming
+      set background=dark
+      colorscheme gruvbox
       " Lightline plugin config
       " Disable the -- INSERT --
       set noshowmode
