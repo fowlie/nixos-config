@@ -28,6 +28,12 @@
     set -x PATH $HOME/.nix-profile/bin /nix/var/nix/profiles/default/bin $PATH
   '';
 
+  programs.fish.shellAliases = {
+    gproxy        = "sudo ssh -f -nNT gitproxy";
+    gproxy-status = "sudo ssh -O check gitproxy";
+    gproxy-off    = "sudo ssh -O exit gitproxy";
+  };
+
   home.packages = with pkgs; [
     bottom
     go
