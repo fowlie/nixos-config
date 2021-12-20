@@ -71,6 +71,12 @@ in
       " NERDTree
       nnoremap <leader>e :NERDTreeToggle<CR>
 
+      " Startify
+      let g:startify_bookmarks = [
+          \ {'h': '~/.config/nixpkgs/home.nix'},
+          \ {'n': '~/.config/nixpkgs/programs/neovim/default.nix'},
+          \ ]
+
       " Tab sizes and file types            " format   T spaces
       "                                     "-------------------"
       set sw=4                              " Default  | 4
