@@ -46,10 +46,11 @@
   };
 
   home.packages = with pkgs; [
-    aws
+    awscli2
     bottom
     go
     gopls
+    jq
     neofetch
     nerdfonts
     ripgrep
