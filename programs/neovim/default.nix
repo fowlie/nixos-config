@@ -9,6 +9,7 @@ let
     lightline-vim
     nerdtree
     surround
+    telescope-nvim
     vim-devicons
     vim-fugitive
     vim-nix
@@ -76,6 +77,13 @@ in
           \ {'h': '~/.config/nixpkgs/home.nix'},
           \ {'n': '~/.config/nixpkgs/programs/neovim/default.nix'},
           \ ]
+
+      " Telescope
+      " Find files using Telescope command-line sugar.
+      nnoremap <leader>ff <cmd>Telescope find_files<cr>
+      nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+      nnoremap <leader>fb <cmd>Telescope buffers<cr>
+      nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
       " Tab sizes and file types            " format   T spaces
       "                                     "-------------------"
