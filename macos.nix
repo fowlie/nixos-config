@@ -26,15 +26,29 @@
 
     # add nix and home-manager binaries
     set -x PATH $HOME/.nix-profile/bin /nix/var/nix/profiles/default/bin $PATH
+
+    # configure golang
+    set -x GOPRIVATE "bitbucket.tech.dnb.no/*"
+    set -x PATH $HOME/go/bin $PATH
   '';
 
+  # Customers GitProxy
   programs.fish.shellAliases = {
     gproxy        = "sudo ssh -f -nNT gitproxy";
     gproxy-status = "sudo ssh -O check gitproxy";
     gproxy-off    = "sudo ssh -O exit gitproxy";
   };
 
+  programs.git.userName = "Mats Faugli";
+  programs.git.userEmail = "mats.faugli@dnb.no";
+  programs.git.extraConfig =
+  ''
+  [url "ssh://git@git.tech-01.net/"]
+    insteadOf = https://bitbucket.tech.dnb.no/scm/
+  '';
+
   home.packages = with pkgs; [
+    aws
     bottom
     go
     gopls
