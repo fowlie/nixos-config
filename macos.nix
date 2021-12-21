@@ -41,11 +41,9 @@
 
   programs.git.userName = "Mats Faugli";
   programs.git.userEmail = "mats.faugli@dnb.no";
-  programs.git.extraConfig =
-  ''
-  [url "ssh://git@git.tech-01.net/"]
-    insteadOf = https://bitbucket.tech.dnb.no/scm/
-  '';
+  programs.git.extraConfig = {
+    url."ssh://git@git.tech-01.net/".insteadOf = "https://bitbucket.tech.dnb.no/scm/";
+  };
 
   home.packages = with pkgs; [
     aws
@@ -55,6 +53,7 @@
     neofetch
     nerdfonts
     ripgrep
+    tldr
   ];
 
   # This value determines the Home Manager release that your
