@@ -11,6 +11,7 @@ let
     surround
     telescope-nvim
     vim-devicons
+    vim-nerdtree-syntax-highlight
     vim-fugitive
     vim-nix
     vim-startify
