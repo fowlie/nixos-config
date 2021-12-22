@@ -17,12 +17,14 @@ let
     vim-startify
 
     # LSP & Code completion
-    cmp-buffer      # autocompletion for buffer
+    # Ref https://dev.to/jakewies/getting-started-with-vim-a-practical-guide-1mm5
     cmp-nvim-lsp    # autocompletion for nvim lsp
-    cmp-vsnip
-    vim-vsnip
+    cmp_luasnip     # snippet autocompletion source
+    lspkind-nvim    # autocompletion icons
+    luasnip        # autocomplete your snippets
     nvim-cmp        # autocompletion framework
-    nvim-lspconfig  # lsp client
+    nvim-lspconfig  # lsp client utils
+    nvim-treesitter # improved syntax highlighting
   ];
 in
 {
@@ -34,8 +36,8 @@ in
   #];
 
   # Copy lua scripts
-  xdg.configFile."nvim/lspconfig.lua".source = ./lspconfig.lua;
-  xdg.configFile."nvim/cmp.lua".source = ./cmp.lua;
+  xdg.configFile."nvim/lua/custom/lsp.lua".source = ./lsp.lua;
+  xdg.configFile."nvim/lua/custom/treesitter.lua".source = ./treesitter.lua;
 
   home.packages = with pkgs; [
     go
@@ -52,9 +54,8 @@ in
     vimdiffAlias = true;
     extraConfig = ''
       " Run lua scripts
-      :luafile ~/.config/nvim/lspconfig.lua
-      set completeopt=menu,menuone,noselect " needed for nvim-cmp setup
-      :luafile ~/.config/nvim/cmp.lua
+      :luafile ~/.config/nvim/lua/custom/lsp.lua
+      :luafile ~/.config/nvim/lua/custom/treesitter.lua
 
       " Basics
       set ignorecase                        " case insensitive
@@ -71,7 +72,11 @@ in
       set splitbelow                        " Split window downwards
 
       " NERDTree
-      nnoremap <leader>e :NERDTreeToggle<CR>
+      nnoremap <leader>n :NERDTreeFocus<CR>
+      nnoremap <C-n> :NERDTree<CR>
+      nnoremap <C-t> :NERDTreeToggle<CR>
+      nnoremap <C-f> :NERDTreeFind<CR>
+
 
       " Startify
       let g:startify_bookmarks = [

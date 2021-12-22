@@ -45,7 +45,6 @@ there's also:
 
 ## Todo
 
-- [ ] Setup treesitter in neovim
 - [ ] Switch from symlinking home.nix to make use of machine/<hostname>.nix
 - [ ] Pimp xmobar with icons
 - [ ] Pimp lightdm theme
@@ -61,6 +60,7 @@ there's also:
 - [ ] Replace Rofi with dmenu...?
 - [ ] Add Super+Arrow keybindings to select/move windows
 - [ ] Migrate ideavimrc
+- [x] Setup treesitter in neovim
 - [x] Split the configuration files to match other machines
 - [x] Add a nerdfont to alacritty
 - [x] Add battery indicator to xmobar
