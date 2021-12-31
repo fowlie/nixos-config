@@ -105,27 +105,13 @@ in
       xnoremap K :move '<-2<CR>gv'
       xnoremap J :move '>+1<CR>gv'
 
-      " CTRL + arrow to jump between windows
-      inoremap <C-h> <C-\><C-N><C-w>h
-      inoremap <C-j> <C-\><C-N><C-w>j
-      inoremap <C-k> <C-\><C-N><C-w>k
-      inoremap <C-l> <C-\><C-N><C-w>l
-
-      nnoremap <C-h> <C-\><C-N><C-w>h
-      nnoremap <C-j> <C-\><C-N><C-w>j
-      nnoremap <C-k> <C-\><C-N><C-w>k
-      nnoremap <C-l> <C-\><C-N><C-w>l
-
-      inoremap <C-h> <C-w>h
-      inoremap <C-j> <C-w>j
-      inoremap <C-k> <C-w>k
-      inoremap <C-l> <C-w>l
+      " leader + hjkl to jump between windows
+      nnoremap <leader>h <C-\><C-N><C-w>h
+      nnoremap <leader>j <C-\><C-N><C-w>j
+      nnoremap <leader>k <C-\><C-N><C-w>k
+      nnoremap <leader>l <C-\><C-N><C-w>l
 
       " Terminal
-      tnoremap <C-h> <C-\><C-N><C-w>h
-      tnoremap <C-j> <C-\><C-N><C-w>j
-      tnoremap <C-k> <C-\><C-N><C-w>k
-      tnoremap <C-l> <C-\><C-N><C-w>l
       tnoremap <Esc> <C-\><C-n>
       nnoremap <leader>t :split term://fish<CR>i
       autocmd TermOpen * set nonumber norelativenumber
