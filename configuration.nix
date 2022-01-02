@@ -71,6 +71,10 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
+  services.xserver.libinput.touchpad = {
+    naturalScrolling = true;
+    accelSpeed = "2.0";
+  };
 
   # Enable brightness buttons on laptop
   services.illum.enable = true;
