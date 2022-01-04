@@ -71,6 +71,14 @@ in
       set splitright                        " Split window to the right
       set splitbelow                        " Split window downwards
 
+      " Hybrid line numbers in normal mode, and normal line numbers in insert mode
+      " Credits: https://jeffkreeftmeijer.com/vim-number
+      :augroup numbertoggle
+      :  autocmd!
+      :  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+      :  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+      :augroup END
+
       " NERDTree
       nnoremap <leader>n :NERDTreeFocus<CR>
       nnoremap <C-n> :NERDTree<CR>
