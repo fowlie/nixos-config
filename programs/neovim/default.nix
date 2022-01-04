@@ -87,9 +87,11 @@ in
 
 
       " Startify
+      nnoremap <leader>s :Startify<CR>
       let g:startify_bookmarks = [
           \ {'h': '~/.config/nixpkgs/home.nix'},
           \ {'n': '~/.config/nixpkgs/programs/neovim/default.nix'},
+          \ {'l': '~/.config/nixpkgs/programs/neovim/lsp.lua'},
           \ ]
 
       " Telescope
