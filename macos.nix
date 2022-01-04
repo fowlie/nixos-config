@@ -50,6 +50,7 @@
     bottom
     go
     gopls
+    go-mockery
     jq
     neofetch
     nerdfonts
