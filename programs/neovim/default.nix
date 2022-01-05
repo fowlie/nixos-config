@@ -84,7 +84,8 @@ in
       nnoremap <C-n> :NERDTree<CR>
       nnoremap <C-t> :NERDTreeToggle<CR>
       nnoremap <C-f> :NERDTreeFind<CR>
-
+      let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {}
+      let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['Jenkinsfile'] = ''
 
       " Startify
       nnoremap <leader>s :Startify<CR>
