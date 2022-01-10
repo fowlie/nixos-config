@@ -38,11 +38,12 @@ myConfig = def
 
 myTerminal = "alacritty" 
 myBorderWidth = 2
-appLauncher = "rofi -modi drun,ssh,window,emoji -show drun -show-icons -theme gruvbox-dark"
+appLauncher = "rofi -modi drun,ssh,window,emoji -show drun -show-icons"
 
 myManageHook :: ManageHook
 myManageHook = composeAll
   [ className =? "jetbrains-idea-ce" <&&> name =? "win0" --> doFloat -- IntelliJ splash screen
   , className =? "jetbrains-studio"  <&&> name =? "win0" --> doFloat -- Android studio splash screen
+  , className =? "Godot_ProjectList"                     --> doFloat -- Godot
   , isDialog                                             --> doFloat
   ] where name = stringProperty "WM_NAME"

@@ -90,6 +90,7 @@ in
       " Startify
       nnoremap <leader>s :Startify<CR>
       let g:startify_bookmarks = [
+          \ {'c': '~/.config/nixpkgs/configuration.nix'},
           \ {'h': '~/.config/nixpkgs/home.nix'},
           \ {'n': '~/.config/nixpkgs/programs/neovim/default.nix'},
           \ {'l': '~/.config/nixpkgs/programs/neovim/lsp.lua'},

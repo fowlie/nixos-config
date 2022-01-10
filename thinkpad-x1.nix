@@ -23,22 +23,24 @@
     username = "mats";
     homeDirectory = "/home/mats";
     packages = with pkgs; [
-      spaceFM
-      google-chrome
+      discord
       firefox
       gimp
+      godot
+      google-chrome
       htop
-      libnotify           # Provides notify-send
-      usbutils
       jq
       killall
+      libnotify           # Provides notify-send
       maven3
       neofetch
-      qutebrowser
+      ripgrep
       slack
-      xorg.xev             # Get keyboard button names with `xev -event keyboard`
+      spaceFM
       teams
+      usbutils
       xclip
+      xorg.xev             # Get keyboard button names with `xev -event keyboard`
 
       # Android development
       android-studio
