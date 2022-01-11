@@ -5,6 +5,7 @@
 
 let
   myVimPlugins = with pkgs.vimPlugins; [
+    editorconfig-nvim
     gruvbox         # theme
     lightline-vim
     nerdtree
