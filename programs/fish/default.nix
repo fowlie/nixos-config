@@ -25,6 +25,7 @@
       g = "git";
     };
     shellAliases = {
+      ls     = "exa --git --icons --time-style long-iso --group-directories-first -lb";
       hms    = "home-manager switch";
       gs     = "git status";
       gd     = "git diff";
