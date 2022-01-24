@@ -6,16 +6,20 @@
 let
   myVimPlugins = with pkgs.vimPlugins; [
     editorconfig-nvim
-    gruvbox         # theme
-    lightline-vim
+    gruvbox                         # theme
     nerdtree
+    vim-devicons                    # icons for NERDTree
+    nvim-web-devicons               # icons for bufferline
     surround
-    telescope-nvim
-    vim-devicons
+    telescope-nvim                  # Fuzzy find & grep
     vim-nerdtree-syntax-highlight
-    vim-fugitive
+    vim-fugitive                    # :Git <subcommand>
     vim-nix
     vim-startify
+
+    # Lightline
+    lightline-vim
+    lightline-gruvbox-vim
 
     # LSP & Code completion
     # Ref https://dev.to/jakewies/getting-started-with-vim-a-practical-guide-1mm5
@@ -39,6 +43,7 @@ in
   # Copy lua scripts
   xdg.configFile."nvim/lua/custom/lsp.lua".source = ./lsp.lua;
   xdg.configFile."nvim/lua/custom/treesitter.lua".source = ./treesitter.lua;
+  xdg.configFile."nvim/lua/custom/lightline.lua".source = ./lightline.lua;
 
   home.packages = with pkgs; [
     go
@@ -57,6 +62,7 @@ in
       " Run lua scripts
       :luafile ~/.config/nvim/lua/custom/lsp.lua
       :luafile ~/.config/nvim/lua/custom/treesitter.lua
+      :luafile ~/.config/nvim/lua/custom/lightline.lua
 
       " Basics
       set ignorecase                        " case insensitive
@@ -132,11 +138,10 @@ in
       " Theming
       set background=dark
       colorscheme gruvbox
-      " Lightline plugin config
+
+      " Additional lightline config (migrate to lightline.lua in future)
       " Disable the -- INSERT --
       set noshowmode
-     " Display current git branch
-      let g:lightline = { 'colorscheme': 'wombat', 'active': {   'left': [ [ 'mode', 'paste' ],             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ] }, 'component_function': {   'gitbranch': 'FugitiveHead' }, }
     '';
   };
 }

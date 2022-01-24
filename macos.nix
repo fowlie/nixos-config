@@ -54,6 +54,7 @@
     jq
     neofetch
     nerdfonts
+    nodejs
     ripgrep
     tldr
   ];
