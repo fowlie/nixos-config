@@ -121,8 +121,8 @@ in
       nnoremap <silent> <S-TAB> :bprevious<CR>
 
       " Move selected line / block of text in visual mode
-      xnoremap K :move '<-2<CR>gv'
-      xnoremap J :move '>+1<CR>gv'
+      xnoremap J :m'>+<CR>gv=gv
+      xnoremap K :m-2<CR>gv=gv
 
       " leader + hjkl to jump between windows
       nnoremap <leader>h <C-\><C-N><C-w>h
