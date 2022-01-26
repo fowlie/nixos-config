@@ -5,6 +5,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./common.nix
     ./programs/default.nix
     ./services/default.nix
   ];

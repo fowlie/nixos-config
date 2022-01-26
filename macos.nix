@@ -7,6 +7,7 @@
   home.homeDirectory = "/Users/mats";
 
   imports = [
+    ./common.nix
     ./programs/alacritty
     ./programs/bat
     ./programs/exa

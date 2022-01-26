@@ -22,11 +22,11 @@
       };
     }];
     shellAbbrs = {
-      g = "git";
+      g      = "git";
+      hms    = "home-manager switch";
     };
     shellAliases = {
-      ls     = "exa --git --icons --time-style long-iso --group-directories-first -lb";
-      hms    = "home-manager switch";
+      ls     = "exa --icons --time-style long-iso --group-directories-first -lb";
       gs     = "git status";
       gd     = "git diff";
       copy   = "xclip -o -selection clipboard";

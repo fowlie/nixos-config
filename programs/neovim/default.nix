@@ -17,6 +17,10 @@ let
     vim-nix
     vim-startify
 
+    # Ranger integration
+    bclose-vim
+    ranger-vim
+
     # Lightline
     lightline-vim
     lightline-gruvbox-vim
@@ -54,7 +58,7 @@ in
   programs.neovim = {
     enable       = true;
     # Uncomment below to build latest version from master branch
-    # package      = pkgs.neovim-nightly;
+    #package      = pkgs.neovim-nightly;
     plugins      = myVimPlugins;
     vimAlias     = true;
     vimdiffAlias = true;
@@ -77,6 +81,11 @@ in
       let mapleader=" "                     " Use space as leader key
       set splitright                        " Split window to the right
       set splitbelow                        " Split window downwards
+
+
+      " Run gofmt on save
+      autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
+
 
       " Hybrid line numbers in normal mode, and normal line numbers in insert mode
       " Credits: https://jeffkreeftmeijer.com/vim-number
