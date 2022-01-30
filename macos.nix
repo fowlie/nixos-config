@@ -48,16 +48,6 @@
 
   home.packages = with pkgs; [
     awscli2
-    bottom
-    go
-    gopls
-    go-mockery
-    jq
-    neofetch
-    nerdfonts
-    nodejs
-    ripgrep
-    tldr
   ];
 
   # This value determines the Home Manager release that your
