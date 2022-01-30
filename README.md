@@ -42,6 +42,9 @@ there's also:
 * `Mod+[` for Firefox
 * `Mod+]` for Ranger
 
+# Notes
+- If network manager fails to start wifi, the card may be blocked (flightmode). Run `sudo rfkill unblock wlan` to unlock it.
+
 
 ## Todo
 
