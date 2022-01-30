@@ -55,7 +55,6 @@ there's also:
 - [ ] Configure Howdy
 - [ ] Configure fingerprint reader
 - [ ] Screen locker
-- [ ] Configure screenshot tool
 - [ ] Extend xmonad with three col layout
 - [ ] Setup android development environment
 - [ ] Configure neovim-lsp for java
@@ -63,10 +62,3 @@ there's also:
 - [ ] Have Rofi show up on Super key press alone
 - [ ] Replace Rofi with dmenu...?
 - [ ] Add Super+Arrow keybindings to select/move windows
-- [ ] Migrate ideavimrc
-- [x] Setup treesitter in neovim
-- [x] Split the configuration files to match other machines
-- [x] Add a nerdfont to alacritty
-- [x] Add battery indicator to xmobar
-- [x] Store wifi passwords safely
-- [x] Fix EURKey keyboard layout
