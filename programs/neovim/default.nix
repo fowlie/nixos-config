@@ -16,10 +16,11 @@ let
     vim-fugitive                    # :Git <subcommand>
     vim-nix
     vim-startify
+    vim-test
 
     # Ranger integration
-    bclose-vim
-    ranger-vim
+    #bclose-vim
+    #ranger-vim
 
     # Lightline
     lightline-vim
@@ -60,8 +61,6 @@ in
     # Uncomment below to build latest version from master branch
     #package      = pkgs.neovim-nightly;
     plugins      = myVimPlugins;
-    vimAlias     = true;
-    vimdiffAlias = true;
     extraConfig = ''
       " Run lua scripts
       :luafile ~/.config/nvim/lua/custom/lsp.lua
@@ -83,8 +82,20 @@ in
       set splitbelow                        " Split window downwards
 
 
+      " Keybindings
+      nnoremap <leader>w :w<CR>
+      nnoremap <leader>q :q<CR>
+      nnoremap <leader>c :bdelete<CR>
+      nmap <silent> <leader>t :TestNearest<CR>
+      nmap <silent> <leader>T :TestFile<CR>
+      nmap <silent> <leader>a :TestSuite<CR>
+      nmap <silent> <leader>l :TestLast<CR>
+      nmap <silent> <leader>g :TestVisit<CR>
+
+
       " Run gofmt on save
-      autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
+      autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
+      autocmd BufWritePre *.go lua goimports(1000)
 
 
       " Hybrid line numbers in normal mode, and normal line numbers in insert mode
@@ -106,6 +117,7 @@ in
       " Startify
       nnoremap <leader>s :Startify<CR>
       let g:startify_bookmarks = [
+          \ {'t': '~/today'},
           \ {'c': '~/.config/nixpkgs/configuration.nix'},
           \ {'h': '~/.config/nixpkgs/home.nix'},
           \ {'n': '~/.config/nixpkgs/programs/neovim/default.nix'},
