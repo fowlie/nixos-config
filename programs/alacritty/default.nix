@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       font = {
-        normal.family = "FiraCode Nerdfont Mono";
+        normal.family = "FiraCode Nerd Font Mono";
         size = 12;
       };
       shell.program = "${pkgs.fish}/bin/fish";

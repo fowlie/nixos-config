@@ -7,17 +7,19 @@
       LESS = "-j 5";
     };
 
-    packages = with pkgs; {
+    packages = with pkgs; [
       bottom
       go
       go-mockery
       gopls
+      jo
       jq
+      fx
       neofetch
       nerdfonts
       nodejs
       ripgrep
       tldr
-    };
+    ];
   };
 }

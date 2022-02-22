@@ -26,7 +26,7 @@
     end
 
     # add bin - wonder why this is missing in the first place, but...
-    set -x PATH /usr/local/bin $PATH
+    set -x PATH /usr/local/bin $HOME/.local/bin $PATH
 
     # add nix and home-manager binaries
     set -x PATH $HOME/.nix-profile/bin /nix/var/nix/profiles/default/bin $PATH
@@ -51,6 +51,8 @@
 
   home.packages = with pkgs; [
     awscli2
+    jdk11
+    maven
     vim       # need regular vim for vimgolf
   ];
 

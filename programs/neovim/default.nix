@@ -10,6 +10,7 @@ let
     nerdtree
     vim-devicons                    # icons for NERDTree
     nvim-web-devicons               # icons for bufferline
+    scrollbar-nvim
     surround
     telescope-nvim                  # Fuzzy find & grep
     vim-nerdtree-syntax-highlight
@@ -17,6 +18,7 @@ let
     vim-nix
     vim-startify
     vim-test
+    wilder-nvim                     # A more adventurous wildmenu
 
     # Ranger integration
     #bclose-vim
@@ -86,16 +88,18 @@ in
       nnoremap <leader>w :w<CR>
       nnoremap <leader>q :q<CR>
       nnoremap <leader>c :bdelete<CR>
-      nmap <silent> <leader>t :TestNearest<CR>
-      nmap <silent> <leader>T :TestFile<CR>
-      nmap <silent> <leader>a :TestSuite<CR>
-      nmap <silent> <leader>l :TestLast<CR>
-      nmap <silent> <leader>g :TestVisit<CR>
+      nnoremap <c-l> :nohlsearch<CR>
+
+      " Vim-test
+      nmap <silent> <leader>tn :TestNearest<CR>
+      nmap <silent> <leader>tf :TestFile<CR>
+      nmap <silent> <leader>ts :TestSuite<CR>
+      nmap <silent> <leader>tl :TestLast<CR>
+      nmap <silent> <leader>tv :TestVisit<CR>
 
 
       " Run gofmt on save
       autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
-      autocmd BufWritePre *.go lua goimports(1000)
 
 
       " Hybrid line numbers in normal mode, and normal line numbers in insert mode
@@ -113,6 +117,16 @@ in
       nnoremap <C-f> :NERDTreeFind<CR>
       let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {}
       let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['Jenkinsfile'] = ''
+
+
+      " Scrollbar
+      augroup your_config_scrollbar_nvim
+          autocmd!
+          autocmd WinScrolled,VimResized,QuitPre * silent! lua require('scrollbar').show()
+          autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+          autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
+      augroup end
+
 
       " Startify
       nnoremap <leader>s :Startify<CR>
