@@ -6,6 +6,8 @@
   home.username = "mats";
   home.homeDirectory = "/Users/mats";
 
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     ./common.nix
     ./programs/alacritty
@@ -14,8 +16,10 @@
     ./programs/fish
     ./programs/fzf
     ./programs/git
+    ./programs/kitty
     ./programs/neovim
     ./programs/ranger
+    ./programs/starship
   ];
 
   programs.fish.shellInit =
@@ -38,9 +42,13 @@
 
   # Customers GitProxy
   programs.fish.shellAliases = {
-    gproxy        = "sudo ssh -f -nNT gitproxy";
+    gproxy        = "sudo ssh -o ServerAliveInterval=60 -f -nNT gitproxy";
     gproxy-status = "sudo ssh -O check gitproxy";
     gproxy-off    = "sudo ssh -O exit gitproxy";
+  };
+
+  programs.fish.shellAbbrs = {
+    psql   = "docker exec -it db-migrate_postgres_1 psql -U postgres ciam";
   };
 
   programs.git.userName = "Mats Faugli";
@@ -52,8 +60,11 @@
   home.packages = with pkgs; [
     awscli2
     jdk11
+    kitty
     maven
+    unixtools.watch
     vim       # need regular vim for vimgolf
+    vscode
   ];
 
   # This value determines the Home Manager release that your

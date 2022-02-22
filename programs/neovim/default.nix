@@ -6,7 +6,6 @@
 let
   myVimPlugins = with pkgs.vimPlugins; [
     editorconfig-nvim
-    gruvbox                         # theme
     nerdtree
     vim-devicons                    # icons for NERDTree
     nvim-web-devicons               # icons for bufferline
@@ -16,6 +15,7 @@ let
     vim-nerdtree-syntax-highlight
     vim-fugitive                    # :Git <subcommand>
     vim-nix
+    vim-signify
     vim-startify
     vim-test
     wilder-nvim                     # A more adventurous wildmenu
@@ -23,6 +23,10 @@ let
     # Ranger integration
     #bclose-vim
     #ranger-vim
+
+    # Theme
+    gruvbox
+    #dracula-vim
 
     # Lightline
     lightline-vim
