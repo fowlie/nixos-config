@@ -12,6 +12,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.loader.timeout = 1;
 
   fileSystems."/" =
     { device = "/dev/disk/by-label/nixos";
