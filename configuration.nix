@@ -29,7 +29,13 @@
   time.timeZone = "Europe/Oslo";
 
   # Use the EURKEY layout, see https://eurkey.steffen.bruentjen.eu
-  services.xserver.layout = "eu";
+  services.xserver = {
+    layout = "eu";
+    resolutions = [
+      { x = 3840; y = 2400; }
+      { x = 2560; y = 1600; }
+    ];
+  };
 
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
