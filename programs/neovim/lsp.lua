@@ -23,6 +23,23 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
     buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
     buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+    -- Automatic highlighting of references to the current text under cursor
+    if client.resolved_capabilities.document_highlight then
+        vim.api.nvim_exec(
+          [[
+          " disable swapping, since both swapfile AND CursorHold reads the `updatetime`
+          set noswapfile
+          set updatetime=0
+          augroup lsp_document_highlight
+            autocmd!
+            autocmd CursorHold   <buffer> lua vim.lsp.buf.document_highlight()
+            autocmd CursorHoldI  <buffer> lua vim.lsp.buf.document_highlight()
+            autocmd CursorMoved  <buffer> lua vim.lsp.buf.clear_references()
+            autocmd CursorMovedI <buffer> lua vim.lsp.buf.clear_references()
+          augroup END
+        ]], false)
+    end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -41,7 +58,7 @@ local cmp = require('cmp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
 
--- better autocompletion experience
+-- Better autocompletion experience
 vim.o.completeopt = 'menuone,noselect'
 
 cmp.setup {

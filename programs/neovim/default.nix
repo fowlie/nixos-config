@@ -9,7 +9,6 @@ let
     nerdtree
     vim-devicons                    # icons for NERDTree
     nvim-web-devicons               # icons for bufferline
-    scrollbar-nvim
     surround
     telescope-nvim                  # Fuzzy find & grep
     vim-nerdtree-syntax-highlight
@@ -36,8 +35,9 @@ let
     # Ref https://dev.to/jakewies/getting-started-with-vim-a-practical-guide-1mm5
     cmp-nvim-lsp    # autocompletion for nvim lsp
     cmp_luasnip     # snippet autocompletion source
+    lsp-colors-nvim # create missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin lsp client
     lspkind-nvim    # autocompletion icons
-    luasnip        # autocomplete your snippets
+    luasnip         # autocomplete your snippets
     nvim-cmp        # autocompletion framework
     nvim-lspconfig  # lsp client utils
     nvim-treesitter # improved syntax highlighting
