@@ -7,6 +7,7 @@
     font.size = 12;
     settings = {
       shell = "${pkgs.fish}/bin/fish";
+      macos_option_as_alt = "yes";
       include = "./theme.conf";
     };
   };

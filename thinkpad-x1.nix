@@ -33,6 +33,7 @@
       killall
       libnotify           # Provides notify-send
       maven3
+      nerdfonts
       slack
       spaceFM
       teams

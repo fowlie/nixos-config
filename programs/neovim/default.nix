@@ -18,6 +18,7 @@ let
     vim-startify
     vim-test
     wilder-nvim                     # A more adventurous wildmenu
+    #lightspeed-nvim                 # More modern easy motion plugin
 
     # Ranger integration
     #bclose-vim
@@ -123,15 +124,6 @@ in
       let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['Jenkinsfile'] = ''
 
 
-      " Scrollbar
-      augroup your_config_scrollbar_nvim
-          autocmd!
-          autocmd WinScrolled,VimResized,QuitPre * silent! lua require('scrollbar').show()
-          autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
-          autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
-      augroup end
-
-
       " Startify
       nnoremap <leader>s :Startify<CR>
       let g:startify_bookmarks = [
@@ -163,11 +155,11 @@ in
       xnoremap J :m'>+<CR>gv=gv
       xnoremap K :m-2<CR>gv=gv
 
-      " leader + hjkl to jump between windows
-      nnoremap <leader>h <C-\><C-N><C-w>h
-      nnoremap <leader>j <C-\><C-N><C-w>j
-      nnoremap <leader>k <C-\><C-N><C-w>k
-      nnoremap <leader>l <C-\><C-N><C-w>l
+      " leader + mnei to jump between windows
+      nnoremap <A-m> <Esc><C-w>h
+      nnoremap <A-n> <Esc><C-w>j
+      nnoremap <A-e> <Esc><C-w>k
+      nnoremap <A-i> <Esc><C-w>l
 
       " Terminal
       tnoremap <Esc> <C-\><C-n>

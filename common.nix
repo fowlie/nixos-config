@@ -16,7 +16,6 @@
       jq
       fx
       neofetch
-      nerdfonts
       nodejs
       ripgrep
       tldr

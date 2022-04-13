@@ -30,7 +30,7 @@ local on_attach = function(client, bufnr)
           [[
           " disable swapping, since both swapfile AND CursorHold reads the `updatetime`
           set noswapfile
-          set updatetime=0
+          set updatetime=200
           augroup lsp_document_highlight
             autocmd!
             autocmd CursorHold   <buffer> lua vim.lsp.buf.document_highlight()
