@@ -31,6 +31,7 @@
   # Use the EURKEY layout, see https://eurkey.steffen.bruentjen.eu
   services.xserver = {
     layout = "eu";
+    autoRepeatDelay = 150;
     resolutions = [
       { x = 3840; y = 2400; }
       { x = 2560; y = 1600; }
