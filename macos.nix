@@ -48,8 +48,11 @@
   };
 
   programs.fish.shellAbbrs = {
-    psql   = "docker exec -it db-migrate_postgres_1 psql -U postgres ciam";
+    ciam-psql   = "docker exec -it db-migrate_postgres_1 psql -U postgres ciam";
   };
+
+  # Terminal font size is unique laptops screen
+  programs.alacritty.settings.font.size = 7;
 
   programs.git.userName = "Mats Faugli";
   programs.git.userEmail = "mats.faugli@dnb.no";
