@@ -36,6 +36,7 @@
       nerdfonts
       slack
       spaceFM
+      spotify
       teams
       usbutils
       xclip
