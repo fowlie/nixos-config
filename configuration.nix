@@ -14,12 +14,19 @@
   virtualisation.docker.enable = true;
 
   networking.hostName = "thinkpad-x1";  # Define your hostname.
-  networking.wireless.enable = true;    # Enables wireless support via wpa_supplicant.
-  networking.wireless.environmentFile = "/run/secrets/wireless.env";
-  # Ref https://nixos.org/manual/nixos/stable/options.html#opt-networking.wireless.environmentFile
-  networking.wireless.networks = {
-    "Stollen71_5G".psk = "@PSK_STOLLEN71@";
-    "ITverket".psk = "@PSK_ITVERKET@";
+  networking.wireless = {
+    enable = true;
+    networks = {
+
+      # Use wpa_passphrase command to add to wifi entries:
+
+      "Stollen71_5G" = {
+        pskRaw = "e9b2730f7cc8cef5ed992287c58609955eb6734d341168bfebd995acf94c31d5";
+      };
+      "Stollen71_2.4G" = {
+        pskRaw = "e9b2730f7cc8cef5ed992287c58609955eb6734d341168bfebd995acf94c31d5";
+      };
+    };
   };
 
   # Use unfree software
@@ -31,6 +38,7 @@
   # Use the EURKEY layout, see https://eurkey.steffen.bruentjen.eu
   services.xserver = {
     layout = "eu";
+    autoRepeatDelay = 150;
     resolutions = [
       { x = 3840; y = 2400; }
       { x = 2560; y = 1600; }

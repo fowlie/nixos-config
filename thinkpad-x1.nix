@@ -10,6 +10,9 @@
     ./services/default.nix
   ];
 
+  # Terminal font size is unique laptops screen
+  programs.alacritty.settings.font.size = 7;
+
   programs.git = {
     enable = true;
     userName = "Mats Faugli";
@@ -36,6 +39,7 @@
       nerdfonts
       slack
       spaceFM
+      spotify
       teams
       usbutils
       xclip
