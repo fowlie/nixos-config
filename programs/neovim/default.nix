@@ -87,6 +87,7 @@ in
       let mapleader=" "                     " Use space as leader key
       set splitright                        " Split window to the right
       set splitbelow                        " Split window downwards
+      nnoremap Q <NOP>                      " Disable ex-mode
 
 
       " Keybindings
@@ -155,11 +156,11 @@ in
       xnoremap J :m'>+<CR>gv=gv
       xnoremap K :m-2<CR>gv=gv
 
-      " leader + mnei to jump between windows
-      nnoremap <A-m> <Esc><C-w>h
-      nnoremap <A-n> <Esc><C-w>j
-      nnoremap <A-e> <Esc><C-w>k
-      nnoremap <A-i> <Esc><C-w>l
+      " leader + neio to jump between windows
+      nnoremap <A-n> <Esc><C-w>n
+      nnoremap <A-e> <Esc><C-w>e
+      nnoremap <A-i> <Esc><C-w>i
+      nnoremap <A-o> <Esc><C-w>o
 
       " Terminal
       tnoremap <Esc> <C-\><C-n>
