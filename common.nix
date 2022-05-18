@@ -9,8 +9,6 @@
 
     packages = with pkgs; [
       bottom
-      go
-      go-mockery
       gopls
       jo
       jq

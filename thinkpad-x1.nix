@@ -30,7 +30,7 @@
       discord
       firefox
       gimp
-      godot
+      go
       google-chrome
       htop
       killall
@@ -44,11 +44,6 @@
       usbutils
       xclip
       xorg.xev             # Get keyboard button names with `xev -event keyboard`
-
-      # Android development
-      android-studio
-      android-tools
-      flutter
     ];
     sessionVariables = {
       # Make Swing apps work in XMonad
